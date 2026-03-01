@@ -9,22 +9,22 @@ for Telugu and Indian English short-form videos.
 cd autoTinglishsub
 
 2. Create virtual environment:
-- python3 -m venv venv
-- source venv/bin/activate (Activate the venv)
+    - python3 -m venv venv
+    - source venv/bin/activate (Activate the venv)
 
 3. Install dependencies:
 pip install -r requirements.txt
 
 4. Install FFmpeg:
 
-# Mac
-brew install ffmpeg
+    # Mac
+    brew install ffmpeg
 
-# Ubuntu/Linux
-sudo apt install ffmpeg
+    # Ubuntu/Linux
+    sudo apt install ffmpeg
 
-# Windows
-winget install ffmpeg
+    # Windows
+    winget install ffmpeg
 
 ## Usage
 
