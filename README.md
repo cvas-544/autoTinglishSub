@@ -5,19 +5,26 @@ for Telugu and Indian English short-form videos.
 
 ## Installation
 
-1. Clone the repo
-git clone https://github.com/yourname/autoTinglishsub.git
+1. Clone the repo and 
 cd autoTinglishsub
 
-2. Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
+2. Create virtual environment:
+    - python3 -m venv venv
+    - source venv/bin/activate (Activate the venv)
 
-3. Install dependencies
+3. Install dependencies:
 pip install -r requirements.txt
 
-4. Install FFmpeg
-brew install ffmpeg
+4. Install FFmpeg:
+
+    # Mac
+    brew install ffmpeg
+
+    # Ubuntu/Linux
+    sudo apt install ffmpeg
+
+    # Windows
+    winget install ffmpeg
 
 ## Usage
 
@@ -31,3 +38,9 @@ Ready for CapCut, VN, Premiere Pro.
 - [ ] Fine-tuned Telugu + Indian English model
 - [ ] Code-switching support
 - [ ] HuggingFace model publish
+
+## 👨‍💼 Author
+
+Built by Vasu Chukka  
+📬 Email: vasu.chukka@outlook.com  
+💻 LinkedIn: [VasuChukka](https://www.linkedin.com/in/vasu-chukka-1a3569116/)
