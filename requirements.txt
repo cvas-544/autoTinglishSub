@@ -1,0 +1,5 @@
+faster-whisper
+torch
+torchaudio
+transformers==4.36.0
+ffmpeg-python
