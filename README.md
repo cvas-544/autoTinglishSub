@@ -9,8 +9,8 @@ for Telugu and Indian English short-form videos.
 cd autoTinglishsub
 
 2. Create virtual environment:
-python3 -m venv venv
-source venv/bin/activate
+- python3 -m venv venv
+- source venv/bin/activate (ACtivate the venv)
 
 3. Install dependencies:
 pip install -r requirements.txt
