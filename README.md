@@ -5,7 +5,7 @@ for Telugu and Indian English short-form videos.
 
 ## Installation
 
-1. Clone the repo
+1. Clone the repo and 
 cd autoTinglishsub
 
 2. Create virtual environment
