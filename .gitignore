@@ -5,4 +5,4 @@ output/
 input/
 *.wav
 *.mp4
-.env
+.env.DS_Store
