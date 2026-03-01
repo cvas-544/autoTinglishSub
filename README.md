@@ -6,7 +6,6 @@ for Telugu and Indian English short-form videos.
 ## Installation
 
 1. Clone the repo
-git clone https://github.com/yourname/autoTinglishsub.git
 cd autoTinglishsub
 
 2. Create virtual environment
