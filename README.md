@@ -38,3 +38,9 @@ Ready for CapCut, VN, Premiere Pro.
 - [ ] Fine-tuned Telugu + Indian English model
 - [ ] Code-switching support
 - [ ] HuggingFace model publish
+
+## 👨‍💼 Author
+
+Built by Vasu Chukka  
+📬 Email: vasu.chukka@outlook.com  
+💻 LinkedIn: [VasuChukka](https://www.linkedin.com/in/vasu-chukka-1a3569116/)
