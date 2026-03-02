@@ -1,6 +1,6 @@
 # autoTinglishSub 🎬
 
-Local-first CLI tool for generating **word-level “popping” subtitles** for Telugu and Indian English short-form videos.
+Local-first CLI tool for generating **word-level "popping" subtitles** for Telugu and Indian English short-form videos.
 
 Powered by a custom fine-tuned Tinglish Whisper model:
 
@@ -59,87 +59,96 @@ Optimized specifically for Tinglish subtitle workflows.
 ```bash
 git clone https://github.com/YOUR_USERNAME/autoTinglishSub.git
 cd autoTinglishSub
+```
 
 ### 2. Create Virtual Environment
 
- ```bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 3. Install Dependencies
 
- ```bash
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Install FFmpeg
 
-Mac:
- ```bash
+**Mac:**
+```bash
 brew install ffmpeg
+```
 
-Ubuntu/Linux:
- ```bash
+**Ubuntu/Linux:**
+```bash
 sudo apt install ffmpeg
+```
 
-Windows:
+**Windows:**
 ```bash
 winget install ffmpeg
+```
 
-⸻
+---
 
 ## 🚀 Usage
 
 ```bash
 python main.py -i input/video.mp4
+```
 
-⸻
+---
 
 ## 📤 Output
 
-	•	Word-level .srt file
-	•	Saved to output/ directory
-	•	Ready to import into:
-	•	CapCut
-	•	VN Editor
-	•	Adobe Premiere Pro
+- Word-level .srt file
+- Saved to output/ directory
+- Ready to import into:
+  - CapCut
+  - VN Editor
+  - Adobe Premiere Pro
 
-Apply “Pop” or “Spring” animation to the text track for the signature effect.
+Apply "Pop" or "Spring" animation to the text track for the signature effect.
 
-⸻
+---
 
-🎯 Intended Use
+## 🎯 Intended Use
 
 Designed for:
-	•	Reels
-	•	YouTube Shorts
-	•	Instagram content
-	•	Podcast clips
-	•	Tech explainers
-	•	Motivational edits
 
-⸻
+- Reels
+- YouTube Shorts
+- Instagram content
+- Podcast clips
+- Tech explainers
+- Motivational edits
 
-🔮 Roadmap
-	•	Automatic model download from Hugging Face
-	•	Code-switching accuracy improvements
-	•	Word-level timing refinement
-	•	Beat-synced subtitle mode
-	•	GUI wrapper
-	•	Direct CapCut XML export
+---
 
-⸻
+## 🔮 Roadmap
 
-📄 License
+- Automatic model download from Hugging Face
+- Code-switching accuracy improvements
+- Word-level timing refinement
+- Beat-synced subtitle mode
+- GUI wrapper
+- Direct CapCut XML export
+
+---
+
+## 📄 License
 
 This project uses a model licensed under Apache 2.0.
 See the model card for details:
 https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu
 
-⸻
+---
 
-👨‍💼 Author
+## 👨‍💼 Author
 
 Built by Vasu Chukka
 
-📬 vasu.chukka@outlook.com
+📬 vasu.chukka@outlook.com  
 💻 https://www.linkedin.com/in/vasu-chukka-1a3569116/
