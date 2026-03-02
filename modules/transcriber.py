@@ -1,31 +1,29 @@
-from faster_whisper import WhisperModel
+import torch
+from transformers import pipeline
 
 def transcribe_audio(audio_path: str) -> list:
-    """
-    Transcribes using faster-whisper — memory efficient.
-    """
-
-    print("Loading model...")
-    model = WhisperModel(
-        "medium",
-        device="cpu",
-        compute_type="int8"      # compressed — uses way less RAM
+    print("Loading fine-tuned model...")
+    
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    
+    transcriber = pipeline(
+        task="automatic-speech-recognition",
+        model="cvas-544/autotinglishsub-whisper-telugu",
+        chunk_length_s=30,
+        device=device
     )
 
     print(f"Transcribing {audio_path}...")
-    segments, info = model.transcribe(
-        audio_path,
-        language="te",
-        word_timestamps=True,
-        initial_prompt="నమస్కారం. This video is in Telugu and English mixed."
-    )
+    result = transcriber(audio_path, return_timestamps="word")
 
     chunks = []
-    for segment in segments:
-        for word in segment.words:
-            chunks.append({
-                "text": word.word,
-                "timestamp": (word.start, word.end)
-            })
+    for chunk in result["chunks"]:
+        chunks.append({
+            "text": chunk["text"],
+            "timestamp": (
+                round(chunk["timestamp"][0], 3),
+                round(chunk["timestamp"][1], 3)
+            )
+        })
 
     return chunks
