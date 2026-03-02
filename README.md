@@ -40,6 +40,11 @@ Model Lineage:
 
 Optimized specifically for Tinglish subtitle workflows.
 
+Training Results:
+- WER reduced from 75% → 15.1%
+- Trained on 105 Telugu+English creator-style audio chunks
+- 10 epochs on RTX 3090
+
 ---
 
 ## ✨ Features
@@ -47,7 +52,8 @@ Optimized specifically for Tinglish subtitle workflows.
 - Word-level subtitle segmentation  
 - `.srt` export  
 - Optimized for Telugu + Indian English  
-- Local execution (no cloud dependency)  
+- Local execution (no cloud dependency)
+- Transcribes using cvas-544/autotinglishsub-whisper-telugu (auto-downloaded)  
 - Creator-focused subtitle formatting  
 
 ---
@@ -129,7 +135,7 @@ Designed for:
 
 ## 🔮 Roadmap
 
-- Automatic model download from Hugging Face
+- Automatic model download from Hugging Face - ✅ Done
 - Code-switching accuracy improvements
 - Word-level timing refinement
 - Beat-synced subtitle mode
