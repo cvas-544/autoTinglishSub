@@ -2,10 +2,13 @@
 
 Local-first CLI tool for generating **word-level "popping" subtitles** for Telugu and Indian English short-form videos.
 
-Powered by a custom fine-tuned Tinglish Whisper model:
+Powered by a custom fine-tuned Tinglish Whisper model — converted to CTranslate2 for 4-5x faster CPU inference:
 
-👉 Hugging Face Model:  
-https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu  
+👉 Hugging Face Model (original):
+https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu
+
+👉 Hugging Face Model (CT2 / faster-whisper):
+https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu-ct2
 
 ---
 
@@ -32,18 +35,24 @@ Built for creators working with:
 
 This CLI integrates:
 
-**cvas-544/autotinglishsub-whisper-telugu**
+**cvas-544/autotinglishsub-whisper-telugu-ct2** (active — faster-whisper / CTranslate2)
 
 Model Lineage:
-- Fine-tuned from `vasista22/whisper-telugu-large-v2` (Apache 2.0)
-- Originally based on `openai/whisper-large-v2` (MIT)
+- Base: `openai/whisper-large-v2` (MIT)
+- Telugu checkpoint: `vasista22/whisper-telugu-large-v2` (Apache 2.0)
+- Fine-tuned → `cvas-544/autotinglishsub-whisper-telugu` (Round 1)
+- Converted → `cvas-544/autotinglishsub-whisper-telugu-ct2` (int8 quantization)
 
-Optimized specifically for Tinglish subtitle workflows.
-
-Training Results:
+Training Results (Round 1):
 - WER reduced from 75% → 15.1%
 - Trained on 105 Telugu+English creator-style audio chunks
 - 10 epochs on RTX 3090
+
+CT2 Conversion:
+- Converted with `ct2-transformers-converter --quantization int8`
+- Model size reduced from ~3GB to ~1.56GB
+- 4-5x faster CPU inference via `faster-whisper`
+- No GPU required for inference
 
 ---
 
@@ -135,12 +144,26 @@ Designed for:
 
 ## 🔮 Roadmap
 
-- Automatic model download from Hugging Face - ✅ Done
-- Code-switching accuracy improvements
+- Automatic model download from Hugging Face — ✅ Done
+- CT2 conversion + int8 quantization — ✅ Done
+- Round 1 fine-tuning (Telugu + Tinglish, WER 75% → 15.1%) — ✅ Done
+- Round 2 fine-tuning (more Tinglish data, accent variety) — 🔜 Pending
+- Gradio web UI — 🔜 In progress
+- Deploy to Hugging Face Spaces — 🔜 Pending (after Round 2 fine-tuning)
+- Support for additional Indian languages (Tamil, Kannada, Hindi) — 🔜 Future
 - Word-level timing refinement
 - Beat-synced subtitle mode
-- GUI wrapper
 - Direct CapCut XML export
+
+---
+
+## 🤝 Contributing
+
+Looking for collaborators to extend language support for Indian content creators.
+
+If you work with Tamil, Kannada, Hindi, Malayalam, or other Indian language audio data — I'd love to connect and expand this beyond Telugu.
+
+Open an issue or reach out directly.
 
 ---
 
