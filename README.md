@@ -3,10 +3,12 @@
 Local-first CLI tool for generating **word-level "popping" subtitles** for Telugu and Indian English short-form videos.
 
 Powered by a custom fine-tuned Tinglish Whisper model: 
+
 👉 Hugging Face Model (original):
 https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu
 
 converted to CTranslate2 for 4-5x faster CPU inference:
+
 👉 Hugging Face Model (CT2 / faster-whisper):
 https://huggingface.co/cvas-544/autotinglishsub-whisper-telugu-ct2
 
