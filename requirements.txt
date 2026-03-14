@@ -1,5 +1,12 @@
-torch
-torchaudio
-transformers==4.36.0
+# FinSense AI — Production Dependencies
+# Only packages directly imported by the AutoSub codebase.
+
+# Inference
+faster-whisper
+
+# Audio / Video
 ffmpeg-python
 librosa
+
+# Dev / Testing
+tqdm

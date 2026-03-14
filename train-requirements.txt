@@ -1,0 +1,19 @@
+# AutoTinglishSub — GPU Training Requirements
+# Install on RunPod after torch+CUDA are available (already pre-installed on RunPod PyTorch images)
+# Run: pip install -r train-requirements.txt
+
+# Core training stack
+transformers>=4.36.0
+datasets
+evaluate
+accelerate
+bitsandbytes          # required for optim="adamw_bnb_8bit"
+tensorboard           # required for report_to=["tensorboard"]
+jiwer                 # required by evaluate for WER metric
+
+# Audio
+librosa
+soundfile
+
+# HuggingFace
+huggingface_hub
